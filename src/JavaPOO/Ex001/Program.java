@@ -29,6 +29,12 @@ public class Program {
 
         System.out.println("\nProduct Data:" + product);
 
+        System.out.print("Enter the number of products to be removed from stock: ");
+        quantity = teclado.nextInt();
+        product.removeProducts(quantity);
+
+        System.out.println("\nProduct Data:" + product);
+
 
         teclado.close();
 
