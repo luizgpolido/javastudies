@@ -30,7 +30,8 @@ public class Program {
 
         System.out.print("Enter a deposit value: ");
         double depositValue = sc.nextDouble();
-        account.setAccountBalance(account.getAccountBalance() + depositValue);
+        //account.setAccountBalance(account.getAccountBalance() + depositValue);
+        account.deposit(depositValue);
 
         System.out.println("Account data: ");
         System.out.println("Account " + account.getAccountNumber() + ", Holder: " + account.getAccountName() + ", Balance: $ " + String.format("%.2f%n" ,account.getAccountBalance()));
@@ -42,7 +43,8 @@ public class Program {
             withdrawValue = sc.nextDouble();
         }
 
-        account.setAccountBalance(account.getAccountBalance() - withdrawValue - 5);
+        //account.setAccountBalance(account.getAccountBalance() - withdrawValue - 5);
+        account.withdraw(withdrawValue);
 
         System.out.println("Account data: ");
         System.out.println("Account " + account.getAccountNumber() + ", Holder: " + account.getAccountName() + ", Balance: $ " + String.format("%.2f%n" ,account.getAccountBalance()));

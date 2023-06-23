@@ -30,6 +30,16 @@ public class Account {
     public void setAccountBalance(double accountBalance) {
         this.accountBalance = accountBalance;
     }
+
+    public void deposit(double amount){
+        accountBalance += amount;
+    }
+
+    public void withdraw(double amount){
+        accountBalance += amount - 5;
+    }
+
+
 /*
     @Override
     public String toString() {
