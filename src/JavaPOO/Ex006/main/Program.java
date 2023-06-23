@@ -9,6 +9,7 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        Account account;
 
         System.out.print("Enter account number: ");
         int accountNumber = sc.nextInt();
@@ -16,15 +17,16 @@ public class Program {
         System.out.print("Enter the account holder: ");
         String accountName = sc.nextLine();
         System.out.print("Is there a initial deposit? (y/n)");
-        String initialDeposit = sc.nextLine();
-        double accountBalance = 0;
+        char initialDeposit = sc.next().charAt(0);
 
-        if (initialDeposit.equals("y")){
+        if (initialDeposit == 'y'){
             System.out.print("Insert your balance: ");
-            accountBalance = sc.nextDouble();
+            double initialBalance = sc.nextDouble();
+            account = new Account(accountNumber, accountName, initialBalance);
+        } else {
+            account = new Account(accountNumber, accountName);
         }
 
-        Account account = new Account(accountNumber, accountName, accountBalance);
         System.out.println("Account data: ");
         System.out.println("Account " + account.getAccountNumber() + ", Holder: " + account.getAccountName() + ", Balance: $ " + String.format("%.2f%n" ,account.getAccountBalance()));
 

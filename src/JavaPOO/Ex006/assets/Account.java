@@ -5,12 +5,16 @@ public class Account {
     private String accountName;
     private double accountBalance;
 
-    public Account(int accountNumber, String accountName, double accountBalance) {
+    public Account(int accountNumber, String accountName, double initialBalance) {
         this.accountNumber = accountNumber;
         this.accountName = accountName;
-        this.accountBalance = accountBalance;
+        this.accountBalance = initialBalance;
     }
 
+    public Account(int accountNumber, String accountName) {
+        this.accountNumber = accountNumber;
+        this.accountName = accountName;
+    }
 
     public int getAccountNumber() {
         return accountNumber;
@@ -36,7 +40,7 @@ public class Account {
     }
 
     public void withdraw(double amount){
-        accountBalance += amount - 5;
+        accountBalance -= amount - 5;
     }
 
 
