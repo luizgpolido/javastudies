@@ -8,10 +8,10 @@ public class Lists {
 
         List<String> list = new ArrayList<>();
         
-        list.add("Pinto");
-        list.add("Penis");
-        list.add("Piroca");
-        list.add("Pintao");
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
 
         for (String x: list) {
             System.out.println(x);
